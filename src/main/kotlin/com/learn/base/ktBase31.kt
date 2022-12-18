@@ -1,12 +1,12 @@
-
+package com.learn.base
 
 // TODO 31.kotlin语言的函数内联学习
 
 fun main(args: Array<String>) {
 //    方式一
-    doLogin("123456","67890",{resMsg : String,stateCode : Int ->
+    doLogin("123456","67890") { resMsg: String, stateCode: Int ->
         println("响应结果:$resMsg,stateCode:$stateCode")
-    })
+    }
 //    方式二
     doLogin("username","admin", saveResLogFun = {resMsg : String,stateCode : Int ->
         println("打印响应结果:$resMsg,stateCode:$stateCode")
